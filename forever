@@ -2,13 +2,13 @@
 # chkconfig: 345 85 15
 # description: Forever for node.js
 
-DEAMON=/home/admin/guangduo/project/
-LOG=/home/admin/guangduo/logs/forever.log
+DEAMON=/home/admin/zmtextile/project/
+LOG=/home/admin/zmtextile/logs/forever.log
 PID=/root/.forever/pids/forever.pid
 COMMAND="npm start"
 
-export PATH=$PATH:/usr/local/bin/
-export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+export PATH=$PATH:/root/.nvm/v0.10.32/bin/
+export NODE_PATH=$NODE_PATH:/root/.nvm/v0.10.32/lib/node_modules/
 
 node=node
 forever=forever
