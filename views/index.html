@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block layout-links %}
+{% parent %}
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+{% endblock %}
+
+{% block layout-scripts %}
+{% parent %}
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="bodyer" class="clearfix">
+        <div class="slide-style" id="J_Slide">
+            <div class="slides_container tab-content">
+                <div class="tab-pannel">
+                    <img src="/context/banner4.jpg"/>
+                </div>
+                <div class="tab-pannel">
+                    <img src="/context/banner1.png"/>
+                </div>
+                <div class="tab-pannel">
+                    <img src="/context/banner2.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="main-col">
+            <div class="base-info clearfix">
+                <div class="info-block about">
+                    <h4 class="info-title"><span>关于中迈/</span>ABOUT</h4>
+                    <div class="info-context">
+                        <a href="#">
+                            <img src="/context/corp.jpg" alt="">
+                        </a>
+                        <p>绍兴中迈纺织品有限公司是集织造、印染、产品设计开发、销售为一体的纺织企业，公司总部设于全球最大的纺织品专业市场中国轻纺城—绍兴柯桥。公司自成立以来，始终坚持“以质量求生存，以信誉求发展”为企业精神，为广大国内外客户提供优质的产品和专业的服务。公司经过多年的发展和进步，中迈品牌已深受广大国内外客户的认可和赞誉...</p>
+                    </div>
+                </div>
+                <div class="info-block news">
+                    <h4 class="info-title"><span>公司新闻/</span>NEWS</h4>
+                </div>
+                <div class="info-block industry">
+                    <h4 class="info-title"><span>行业新闻/</span>NEWS</h4>
+                </div>
+            </div>
+            <div class="exhibition">
+                <div class="product"></div>
+                <div class="contact"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    KISSY.use('zm/index');
+    </script>
+{% endblock %}

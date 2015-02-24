@@ -2,41 +2,57 @@
 .fr {float: right;}
 
 /** main content **/
-.slider-content {
-	width: 860px;
-	margin: 110px 20px;
-}
-.slider-content .logo {
-	height: 120px;
-}
-.slider-content .wrapper {
+.tab-content {
   position: relative;
-  height: 150px;
+  height: 400px;
   overflow: hidden;
 }
-.slider-content .wrapper .trigger {
+.tab-pannel {
   position: absolute;
-  right: 0;
-  bottom: 0;
-}
-.wrapper .trigger a {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
+  width: 2000px;
+  height: 100%;
   text-align: center;
-  color: #000;
-  margin-right: 2px;
-  background: rgba(255, 255, 255, .5)
+  left: 50%;
+  margin-left: -1000px;
 }
-.wrapper .trigger a.active-trigger {
-  color: #f60;
+.tab-pannel img {
+  text-align: center;
 }
-.text-panels {
-  margin-top: 40px;
+
+
+.main-col {
+  padding: 20px;
+  background: #F5FFFA;
+}
+.main-col .base-info {
+    width: 990px;
+    margin: 0 auto;
+}
+.base-info .info-block {
+  width: 300px;
+  margin-right: 45px;
+}
+.base-info .about,
+.base-info .news,
+.base-info .industry {
+  float: left;
+}
+.base-info .industry {
+  margin-right: 0px;
+}
+.base-info h4.info-title {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
   font-size: 14px;
-}
-.text-panels span {
   color: #999;
-  font-size: 12px;
+}
+h4.info-title span {
+  color: #0E9E57;
+  font-weight: bold;
+}
+.info-context p {
+  margin: 0 auto;
+  word-wrap: break-word;
+  word-break: break-all;
 }

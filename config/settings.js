@@ -5,7 +5,7 @@ var config = {
   session_secret: 'guangduo_node_server',
   auth_cookie_name: 'guangduo_node_server',
   HOSTS: 'www.guangduo.com.cn',
-  PORT: 3000, //process.env.PORT
+  PORT: 80, //process.env.PORT
 };
 
 module.exports = config;
