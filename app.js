@@ -5,18 +5,30 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var swig = require('swig');
 
 // 路由模块
 var routes = require('./config/routes');
 // 配置
 var config = require('./config/settings');
-
 var app = express();
 
-// 设置视图引擎的路径配置，node的全局变量__dirname，即取得执行的js所在的路径，另外__filename是目前执行的js文件名
-app.set('view', path.join(__dirname, 'views'));
 // 设置模板引擎为jade
-app.set('view engine', jade);
+// app.set('view engine', 'jade');
+app.engine('.html', swig.renderFile);
+app.set('view engine', 'html');
+// 设置视图引擎的路径配置，node的全局变量__dirname，即取得执行的js所在的路径，另外__filename是目前执行的js文件名
+app.set('views', path.join(__dirname, 'views'));
+
+// var templates = {
+//   "layout": "{% block content %}{% endblock %}",
+//   "home.html": "{% extends 'layout.html' %}{% block content %}...{% endblock %}"
+// };
+// swig.setDefaults({ loader: swig.loaders.memory(templates) });
+// 
+app.set('view cache', false);
+// To disable Swig's cache, do the following:
+swig.setDefaults({ cache: false });
 
 // 设置网站图标
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
@@ -65,7 +77,7 @@ app.use(session({
 // 静态资源处理 css/js/img等
 app.use(express.static(path.join(__dirname, 'public')))
 
-// 启用路有个
+// 启用路由
 routes(app);
 
 // 处理404错误
@@ -87,7 +99,7 @@ if (app.get('env') === 'development') {
     });
 }
 
-// 生成环境将不会把堆栈错误推送给用户
+// 生产环境将不会把堆栈错误推送给用户
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
@@ -95,6 +107,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
