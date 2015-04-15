@@ -11,41 +11,120 @@
 {% endblock %}
 
 {% block content %}
-    <div id="bodyer" class="clearfix">
+    <div id="bodyer">
         <div class="slide-style" id="J_Slide">
             <div class="slides_container tab-content">
-                <div class="tab-pannel">
-                    <img src="/context/banner4.jpg"/>
-                </div>
                 <div class="tab-pannel">
                     <img src="/context/banner1.png"/>
                 </div>
                 <div class="tab-pannel">
-                    <img src="/context/banner2.png"/>
+                    <img src="/context/banner2.jpg"/>
+                </div>
+                <div class="tab-pannel">
+                    <img src="/context/banner5.jpg"/>
                 </div>
             </div>
         </div>
-        <div class="main-col">
-            <div class="base-info clearfix">
+        <div class="mod-col base-info">
+            <div class="mod-col-center clearfix">
                 <div class="info-block about">
-                    <h4 class="info-title"><span>关于中迈/</span>ABOUT</h4>
+                    <div class="info-title">
+                        <h4>
+                            <i class="zmfont font-home">&#xe60d;</i>
+                            <span>公司简介</span>
+                        </h4>
+                    </div>
                     <div class="info-context">
-                        <a href="#">
-                            <img src="/context/corp.jpg" alt="">
-                        </a>
-                        <p>绍兴中迈纺织品有限公司是集织造、印染、产品设计开发、销售为一体的纺织企业，公司总部设于全球最大的纺织品专业市场中国轻纺城—绍兴柯桥。公司自成立以来，始终坚持“以质量求生存，以信誉求发展”为企业精神，为广大国内外客户提供优质的产品和专业的服务。公司经过多年的发展和进步，中迈品牌已深受广大国内外客户的认可和赞誉...</p>
+                        <div class="plant-show">
+                            <ul class="clearfix">
+                                <li class="first">
+                                    <img src="/context/plant1.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="/context/plant2.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="introduce">
+                            绍兴中迈纺织品有限公司是集织造、印染、产品设计开发、销售为一体的纺织企业，公司总部设于全球最大的纺织品专业市场中国轻纺城—绍兴柯桥。公司自成立以来，始终坚持“以质量求生存，以信誉求发展”为企业精神，为广大国内外客户提供优质的产品和专业的服务。公司经过多年的发展和进步，中迈品牌已深受广大国内外客户的认可和赞誉...
+                        </p>
+                        <p><a href="#">+了解更多</a></p>
                     </div>
                 </div>
-                <div class="info-block news">
-                    <h4 class="info-title"><span>公司新闻/</span>NEWS</h4>
-                </div>
-                <div class="info-block industry">
-                    <h4 class="info-title"><span>行业新闻/</span>NEWS</h4>
+                <div class="info-block contact">
+                    <div class="info-title">
+                        <h4>
+                            <i class="zmfont font-contact">&#xe600;</i>
+                            <span>联系我们</span>
+                        </h4>
+                    </div>
+                    <div class="info-context">
+                        <ul class="contacts clearfix">
+                            <li>
+                                <div>
+                                    <span class="zmfont man">&#xe610;</span>
+                                </div>
+                                <div class="contact-phone">
+                                    <p>(王先生)</p>
+                                    <p>18906753661</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="zmfont lady">&#xe611;</span>
+                                </div>
+                                <div class="contact-phone">
+                                    <p>(吉小姐)</p>
+                                    <p>13676858212</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="ads">
+                            <span class="contact-icon zmfont">&#xe613;</span>
+                            <span class="contact-detail">浙江省绍兴市柯桥区轻纺城</span>
+                        </p>
+                        <p class="email">
+                            <span class="contact-icon zmfont">&#xe612;</span>
+                            <span class="contact-detail">zhongmaitex@qq.com</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="exhibition">
-                <div class="product"></div>
-                <div class="contact"></div>
+        </div>
+        <div class="product-show">
+            <div class="product-show-center clearfix">
+                <div class="product-title">
+                    <h4>
+                        <i class="zmfont font-product">&#xe614;</i>
+                        <span>产品展示</span>
+                    </h4>
+                </div>
+                <div class="product-context">
+                    <div id="J_ProductSlide" class="product-list">
+                        <div class="trigger-bar">
+                            <a href="javascript:void(0);" title="上翻" class="trigger-bar-prev">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" title="下翻" class="trigger-bar-next">
+                                <i></i>
+                            </a>
+                        </div>
+                        <div id="J_pannel" class="scrollable-pannel">
+                            <div class="scrollable-content">
+                                <!-- 1~3 -->
+                                <img src="/context/micai3.jpg" />
+                                <img src="/context/micai1.jpg" />
+                                <img src="/context/micai2.jpg" />
+                            </div>
+                            <div class="scrollable-content">
+                                <!-- 4~6 -->
+                                <img src="/context/micai4.jpg" />
+                                <img src="/context/micai5.jpg" />
+                                <img src="/context/micai6.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
