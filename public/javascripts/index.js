@@ -15,7 +15,35 @@ KISSY.add(function (S, _, Slider) {
         }
     });
 
+    var prodSlide = new Slider('J_ProductSlide',{
+        eventType:'click',
+        navClass:'scrollable-trigger',
+        contentClass:'scrollable-pannel',
+        pannelClass:'scrollable-content',
+        selectedClass:'current',
+        triggerSelector:'a',
+        carousel: true,
+        autoSlide: true,
+        effect:'hSlide'
+    });
 
+    function addEventListen() {
+        S.all('.trigger-bar a').on('click', function() {
+            if (S.DOM.hasClass(this, 'trigger-bar-prev')) {
+                prodSlide.previous();
+            } else {
+                prodSlide.next();
+            }
+        })
+    }
+
+    var initialize = {
+        start: function() {
+            addEventListen();
+        }
+    }
+
+    initialize.start();
 }, {
     requires: ['core', 'kg/slide/2.0.2/']
 })
